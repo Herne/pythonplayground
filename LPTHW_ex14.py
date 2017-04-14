@@ -1,11 +1,11 @@
 from sys import argv
 
-script, user_name = argv
+script, user_name, role_class = argv
 prompt = '>>> '
 
-print "Hi %s, I'm the %s script." % (user_name, script)
+print "Hi %s the %s, I'm the %s script." % (user_name, role_class, script)
 print "I'd like to ask you a few questions."
-print "Do you like me %s?" % user_name
+print "Do you like me %s the %s?" % (user_name, role_class)
 likes = raw_input (prompt)
 
 
