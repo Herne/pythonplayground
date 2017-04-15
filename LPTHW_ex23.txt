@@ -1,0 +1,32 @@
+__author__
+__version__
+
+import argparse
+
+os.listdir() # takes a directory, returns a list
+for x in a_list
+
+os.path.splitext(filename)[1] # split the filename into 2 parts, 0 = name, 1 = ext
+if old_ext == file_ext:
+name_list = list(filename) returns ['t','e','s','t','.','o','l','d']
+len(name_list) # 8
+len(old_ext) # 3
+len(name_list) - len(old_ext) # 5
+name_list[5] = 'o'
+name_list[5:] = from 'o' to the end (not include)
+name_list[5:] = list(new_ext) = list('txt') # expand from location 5 to the end with another list ['t','x','t']
+newfile = ''.join(name_list) # string.join(list)
+
+os.rename(path + old name, path + new name)
+
+def get_parser
+parser = argparse.argumentParser(description='')
+parser.add_argument('arg name', metavar, type, nargs, help)
+
+def main()
+
+args = vars(parse.parse_args()) #returns a dictionary?
+work_dir = args['work_dir'][0]
+
+if __name__ == '__main__':
+    main()
