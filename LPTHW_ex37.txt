@@ -1,0 +1,220 @@
+and
+	logical operator. True if both are True.
+
+as
+	used to create an alias while importing a module.
+	>>> import math as myAlias
+	>>> myAlias.cos(myAlias.pi)
+	>>> -1.0
+
+assert 
+	for debugging purposes. 
+	asset condition, message
+	>>> asset a > 5, "The value of a is smaller than 5, and this is wrong."
+
+break
+	used inside for and while loops to alter their normal behavior.
+	break will end the smallest loop it is in and control flows to the statement immediately below the loop.
+	>>> for i in range(1, 11)
+	>>> 	if i == 5:
+	>>>	    break
+	>>>	print i
+	1 2 3 4
+
+class
+	used to define a new user-defined class.
+	a collection of related attibutes and methods to try to represent a real world situation.
+	class ExampleClass:
+	    def function1(parameters):
+		...	
+	    def function2(parameters):
+		...	
+
+continue 
+	used iside for and while loops to alter their normal behavior.
+	causes to end the current iteration of the loop, but not the whole loop.
+	>>> for i in range(1, 11)
+	>>> 	if i == 5:
+	>>>	   continue 
+	>>>	print i
+	1 2 3 4 6 7 8 9 10
+
+def
+	used to define a user-defined function.
+	def function_name(parameters):
+	    ...
+	    return return_value
+	
+del
+	used to delete the reference to an object.
+	>>> del a
+	also used to delete items from a list or a dictionary
+	>>> del a[1]
+
+elif
+	conditional branching. short for else if.
+
+else
+	conditional branching. if all conditions are false.
+
+except
+	try..except
+	try:
+	    r = 1/num
+	except:
+	    print 'Exception caught'
+	    return
+	return r
+
+exec
+	used for executing a dynamically created statement or program
+	>>> exec """
+	... for i in range(3):
+	...     print 'Python is cool'
+	... """
+	Python is cool
+	Python is cool
+	Python is cool
+
+finally 
+	clean up. executed no matter encounter exception or not.
+
+for
+	for loop
+
+from 
+	from module import method
+
+global 
+	useful to change or create global variables in a local context.
+	def bob():
+	    global me
+	    me = "locally defined"
+	    print me
+	bob() # this is better. access a local variable is considered bad practice.
+	print me # Asking for a global variable. Seldomly used.
+
+if
+	conditional branching.
+
+import
+	import module
+
+in
+	in a range/iterable
+
+is
+	>>> a = [1, 2, 3]
+	>>> b = a
+	>>> b is a 
+	True
+	>>> b == a
+	True
+	>>> b = a[:]
+	>>> b is a
+	False
+	>>> b == a
+	True
+
+lambda
+	used for creating annoymous functions at runtimes.
+	>>> def f (x): return x**2
+	>>> print f(8)
+	64
+	>>> g = lambda x: x**2
+	>>> print g(8)
+	64
+not
+	logical operator. Invert the truth value.
+or
+	logical operator. True if any is True.
+pass
+	the pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action.
+	def inilog(*args):
+	    pass # Remember to implement this!
+print
+	print statement
+raise
+	raise an exception
+	if i ==0:
+	    raise ZeroDivisionError('Divided by Zero')
+
+return
+	return a value from the function
+
+try
+	try..except
+	try:
+	    r = 1/num
+	except:
+	    print 'Exception caught'
+	    return
+	return r
+
+while 
+	while loop
+with
+	
+	with file.open('myfile.txt') as f:
+	    do stuff...
+	which is short-hand for
+
+	f = file.open('myfile.txt'):
+	try:
+	    do stuff...
+	finally:
+	    f.close()
+yield
+	yield is a keyword that is used like return, except the function will return a generator.
+
+	>>> def createGenerator():
+	...    mylist = range(3)
+	...    for i in mylist:
+	...        yield i*i
+	...
+	>>> mygenerator = createGenerator() # create a generator
+	>>> print(mygenerator) # mygenerator is an object!
+	<generator object createGenerator at 0xb7555c34>
+	>>> for i in mygenerator:
+	...     print(i)
+	0
+	1
+	4
+	Here it's a useless example, but it's handy when you know your function will return a huge set of values that you will only need to read once.
+
+	To master yield, you must understand that when you call the function, the code you have written in the function body does not run. The function only returns the generator object, this is a bit tricky :-)
+
+	Then, your code will be run each time the for uses the generator.
+
+	Now the hard part:
+
+	The first time the for calls the generator object created from your function, it will run the code in your function from the beginning until it hits yield, then it'll return the first value of the loop. Then, each other call will run the loop you have written in the function one more time, and return the next value, until there is no value to return.
+
+	The generator is considered empty once the function runs but does not hit yield anymore. It can be because the loop had come to an end, or because you do not satisfy an "if/else" anymore.
+
+Data Types
+For data types, write out what makes up each one. For example, with strings write out how you create a string. For numbers, write out a few numbers.
+• True
+• False
+• None
+• strings 
+• numbers 
+• floats 
+• lists
+
+String Escape Sequences
+For string escape sequences, use them in strings to make sure they do what you think they do.
+• \\ • \' • \" • \a • \b • \f • \n • \r • \t • \v
+
+String Formats
+Same thing for string formats: use them in some strings to know what they do.
+• %d • %i • %o • %u • %x • %X • %e • %E • %f • %F • %g • %G
+www.it-ebooks.info
+SYMBOL REVIEW 125
+• %c • %r • %s • %%
+Operators
+Some of these may be unfamiliar to you, but look them up anyway. Find out what they do, and if you still can’t figure it out, save it for later.
+•+ •- •*
+• ** •/
+• // •% •< •>
+• <= • >= • == • != • <> • () • [] • {} •@ •, •:
