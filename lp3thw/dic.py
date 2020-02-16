@@ -1,10 +1,5 @@
-student = {
-    "name": "Mark",
-    "student_id": 15163,
-    "feedback": None
-}
+student = {"name": "Mark", "student_id": 15163, "feedback": None, "lastname": "Kowalski"}
 
-student["lastname"] = "Kowalski"
 try:
     last_name = student["lastname"]
     print(last_name)
